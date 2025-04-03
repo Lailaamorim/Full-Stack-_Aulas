@@ -1,0 +1,13 @@
+#app {
+    display: grid;
+}
+/* Mesmo com os elemento inline, assim que apliquei o grid, eles 
+viraram block, pois eles são controlados pelo pai */
+
+#app > div {
+    border: 1px solid red;
+}
+
+span {
+    border: 1px solid blue;
+}
