@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+
+#app{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
+    grid-template-rows: repeat(3, 1fr); /* 3 linhas de tamanhos iguais */
+    height: 100vh;
+
+    border:  2px solid green;
+}
+#app * {
+    border: 1px solid red;
+}
+
+
+#app header {
+    grid-column: 1/4;
+
+}
+
+#app main {
+     grid-column: 1/3;
+}
+#app footer {
+    grid-column:1/4
+}

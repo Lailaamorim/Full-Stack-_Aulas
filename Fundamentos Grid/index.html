@@ -10,11 +10,11 @@
     <div id="app">
 
         <div> 1 </div> <!--display: blok peg a linha toda-->
-        <span>2</span> <!--display: inline = Vai fazer com que a -->
-        <span>3</span><!--largura do elemento fique somente com a largura do conteúdo -->
-        <span>4</span>
+        <div> 2 </div> <!--display: inline = Vai fazer com que a -->
+        <div> 3 </div><!--largura do elemento fique somente com a largura do conteúdo -->
+        <div> 4 </div>
         
-        </div>
+    </div>
         <!-- 
         PROPRIEDADES FUNDAMENTAIS
         Todo Grid é composto de 2 principais grupos:
@@ -25,6 +25,148 @@
 
           
 
+
+<!-- ## CONTAINER (PAI)
+
+     - Grid-template;
+     - Grid-template-columns;
+     - Grid-template-rows; 
+     - Grid-template-areas;
+
+## ITEMS (FILHOS)
+
+*Grid-columns;
+     - Grid-column-start;
+     - Grid-column-end;
+
+*Grid-rows; 
+
+    - Grid-row-start;
+    - Grid-row-end;
+
+*Grid-gap  
+
+    - Row-gap;
+    - Column-gap;
+
+
+----------------------------------------------------------------------------------------------
+  
+1. grid-template
+
+Define as linhas e colunas da grade em um único atalho. Pode incluir grid-template-rows, 
+grid-template-columns e grid-template-areas.
+        
+.container {
+  display: grid;
+  grid-template: 100px 200px / 1fr 2fr; ( linhas e 2 colunas )
+}
+
+Isso cria:
+
+Duas linhas: a primeira com 100px e a segunda com 200px.
+Duas colunas: a primeira ocupando 1 fração do espaço disponível e a segunda, 2 frações.
+
+----------------------------------------------------------------------------------------------
+
+2. grid-template-columns
+Define a quantidade e o tamanho das colunas na grade.
+
+Isso cria:
+
+.container {
+  display: grid;
+  grid-template-columns: 100px auto 1fr;
+}
+
+A primeira coluna com 100px.
+A segunda ajustando-se automaticamente ao conteúdo.
+A terceira ocupando o espaço restante.
+
+----------------------------------------------------------------------------------------------
+
+3. grid-template-rows
+Define a quantidade e o tamanho das linhas na grade.
+
+.container {
+  display: grid;
+  grid-template-rows: 100px 150px;
+}
+
+Isso cria:
+
+A primeira linha com 100px.
+A segunda linha com 150px.
+
+4. grid-template-areas
+Define áreas nomeadas dentro da grade, facilitando a organização visual.
+
+Exemplo:
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100px 200px;
+  grid-template-areas: 
+    "header header"
+    "sidebar main";
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+
+Isso cria:
+
+A primeira linha ocupada pelo header.
+A segunda linha dividida entre sidebar e main.
+
+
+
+#app1 div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+     
+}
+    O seletor #app1 div:nth-child(1) significa:
+
+🔹 #app1 → Seleciona um elemento com o ID "app1".
+🔹 div:nth-child(1) → Seleciona o primeiro filho dentro de #app1 que seja uma div.
+
+<div id="app1">
+  <div>Primeira div</div>  ✅ Este será estilizado 
+  <div>Segunda div</div>
+  <p>Parágrafo</p>
+</div> -->
+
+
+<!-- ## PROPRIEDADE DE ALINHAMENTO 
+
+Existem 9 propriedades fundamentais 
+
+** 6 Aplicadas em container **
+
+'align-content'
+'justify-content'
+'place-content'
+
+'align-items'
+'justify-items'
+'place-items
+
+** 3 Aplicadas em itens **
+
+'align-self'
+'justify-self'
+'place-self'
+
+Então podemos separar em três grupos:
+'align', 'justify', 'place'
+
+Em cada um deles irá observar ou o 
+- conteúdo do elemento "content"
+- itens do elemento "items"
+- o próprio elemento "self" -->
 
 
 </body>
